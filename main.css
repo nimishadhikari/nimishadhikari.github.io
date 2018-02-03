@@ -1,26 +1,78 @@
 body{
-	background-color: powderblue
+	background-color: #86af49;
 }
 
 h1{
-	font-family: sans-serif;
+	font-family: "Georgia";
 	font-size: 200%
+    text-align: center;
+    color: whitesmoke;
+    padding: 12px;
 }
 
-img{
-	width: 25%;
-	height:25%;
-	border-style: solid;
-	grid-row-start: 1;
-	grid-row-end: 3; 
+#links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
-.grid-parent{
-	display: grid;
-	grid-row-gap: 100px;
-	grid-column-gap: 50px;
+li {
+    float: left;
+    font-family: "Georgia";
+    color: darkolivegreen;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
-.grid-image{
- 	
+li a {
+    display: block;
+    text-align: center;
+    padding: 25px 85px;
+    text-decoration: none;
+    font-size: 25px;
+    color: darkgreen;
+}
+a {
+    font-family:"Georgia";
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+}
+.menu {
+    grid-area: sidebar;
+    background-color: #e3eaa7;
+}
+
+.image {
+    grid-area: image;
+}
+img {
+    padding: 20px 30px;
+}
+h2{
+    font-family: "Georgia";
+    color: darkolivegreen;
+    padding-left: 25px;
+}
+p {
+    font-family: "Georgia";
+    color: darkolivegreen;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.text {
+    grid-area: main;
+    background-color:#b5e7a0;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 350px 50px 450px 600px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar main main image"
+    ". main main .";
 }
