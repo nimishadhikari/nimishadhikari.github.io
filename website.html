@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- EDIT: page title shown in the browser tab and search results -->
+<title>Nimish Adhikari's Homepage</title>
+<meta name="description" content="Homepage of Nimish Adhikari, Postoctoral Research Fellow.">
+
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #1c2530;
+    --muted: #5a6672;
+    --rule: #dce1e6;
+    --link: #1b5e8a;
+    --link-hover: #0d3d5e;
+    --focus: #c2410c;
+    --measure: 46rem;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181d;
+      --ink: #e4e8ec;
+      --muted: #9aa5b0;
+      --rule: #2d353d;
+      --link: #7fb8e0;
+      --link-hover: #b3d6ee;
+      --focus: #fb923c;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { font-size: 112.5%; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    line-height: 1.6;
+  }
+
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 0.15em; }
+  a:hover { color: var(--link-hover); }
+  a:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+
+  main {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem 2rem;
+  }
+
+  /* ---------- Header ---------- */
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr 11rem;
+    gap: 2rem;
+    align-items: start;
+  }
+  .intro img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 3px;
+    background: var(--rule);
+  }
+  h1 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.6rem;
+  }
+  .role { margin: 0; font-size: 1.05rem; color: var(--muted); line-height: 1.45; }
+  .email { margin: 1rem 0 0; font-size: 0.95rem; }
+
+  nav { margin: 2rem 0 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; font-size: 0.95rem; }
+
+  /* ---------- Sections ---------- */
+  section { margin-top: 2.75rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+  section.plain { border-top: 0; padding-top: 0; margin-top: 2rem; }
+  h2 { font-size: 1.35rem; font-weight: 600; margin: 0 0 1rem; }
+  p { margin: 0 0 1rem; max-width: 40rem; }
+
+  ul.items { list-style: none; margin: 0; padding: 0; }
+  ul.items li { margin: 0 0 0.55rem; max-width: 40rem; }
+
+  /* Paper list: title on one line, authors and venue beneath */
+  ul.papers { list-style: none; margin: 0; padding: 0; }
+  ul.papers li { margin: 0 0 1rem; max-width: 40rem; }
+  ul.papers .meta { display: block; font-style: italic; color: var(--muted); font-size: 0.93rem; }
+
+  .people dt { font-weight: 600; margin-top: 0.8rem; }
+  .people dd { margin: 0.1rem 0 0; max-width: 40rem; }
+
+  .program { margin-bottom: 1.1rem; max-width: 40rem; }
+  .program strong { font-weight: 600; }
+
+  footer {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 3.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  footer { margin-top: 1rem; }
+
+  /* ---------- Small screens ---------- */
+  @media (max-width: 40rem) {
+    html { font-size: 106.25%; }
+    main { padding-top: 2rem; }
+    .intro { grid-template-columns: 1fr; }
+    .intro img { order: -1; width: 9rem; }
+    h1 { font-size: 2.1rem; }
+  }
+</style>
+</head>
+
+<body>
+<main>
+
+  <!-- ====================== HEADER ======================
+       Replace photo.jpg with your own image (portrait, roughly 400x500 px).
+       Delete the whole <img> line if you don't want a photo. -->
+  <header class="intro">
+    <div>
+      <h1>Nimish Adhikari</h1>
+      <p class="role">
+        Postdoctoral Research Fellow, Brigham and Women's Hospital<br>
+        Research Fellow, Harvard Medical School <br>
+        Biostatistician, VA Boston Healthcare System
+      </p>
+      <!-- Written out in words to dodge spam scrapers. -->
+      <p class="email">nadhikari1 AT bwh DOT harvard DOT edu</p>
+
+      <nav aria-label="Page sections">
+        <a href="#papers">Publications</a>
+        <a href="files/cv.pdf">CV</a>
+        <a href="#teaching">Teaching</a>
+      </nav>
+    </div>
+    <img src="files/photo.jpg" alt="Portrait of Nimish Adhikari" width="400" height="500">
+  </header>
+
+  <!-- ====================== ABOUT ====================== -->
+  <section class="plain" id="about">
+    <p>
+      I am an Postdoctoral Reseach fellow at Brigham and Women's Hospital and Harvard medical school.
+      I also am a Biostatistician at the VA Boston Healthcare System.
+      I did my PhD at Boston University, and my dissertation advisor was Dr. Gina Peloso.
+    </p>
+    <p>
+      My research is focused on <em>genetic and multi-omic analysis of large scale Electronic Health Record (EHR) data</em>. 
+      I have experience in designing and performing analysis for studies on topics like Genome Wide Association Studies (GWAS), Mendelian Randomization (MR), Bayesian methods for genetic outcomes and genetic determinanants for disease progression. 
+      Currently I am interested in using Machine Learning and Deep Learning methods to encode EHR data, and using these encodings to understand novel biology. 
+      I also currently work on various studies with the Million Veteran Program (MVP), a large dataset of a million veterans, 
+      where I have studied genetic determinanants for phenotypes including incident and subsequent stroke, lymphoedema, and drug responses (BMI post-GLP1).
+    </p>
+
+    <p>Here are some of my recent papers:</p>
+    <ul class="items">
+      <li><a href="https://www.cell.com/hgg-advances/fulltext/S2666-2477(26)00032-1">Bayesian Mendelian randomization methods for index trait bias correction in subsequent trait genome-wide association studies</a>, <em>HGG Advances (2026)</em></li>
+      <li><a href="https://www.ahajournals.org/doi/abs/10.1161/circgen.125.005442">Genome-Wide Association Study of Chronic Venous Insufficiency and Lymphedema in the Million Veteran Program</a>, <em>Circulation: Genomic and Precision Medicine (2026)</em></li>
+      <li><a href="https://www.ahajournals.org/doi/full/10.1161/STROKEAHA.124.047103">Protein Identification for Stroke Progression via Mendelian Randomization in Million Veteran Program and UK Biobank</a>, <em>AHA Stroke (2024)</em></li>
+    </ul>
+
+    </p>
+    <p>
+      Below you'll find all my papers.
+      Here's a probably outdated <a href="files/CV.pdf">CV</a>.
+    </p>
+  </section>
+
+<!-- ====================== PAPERS ======================
+       Copy one <li> per paper, newest first.
+       Line 1: linked title.  Line 2 (class="meta"): coauthors, venue, year. -->
+<section id="papers">
+<h2>Publications</h2>
+
+<p>
+  <a href="https://doi.org/10.1016/j.xhgg.2026.100592">
+    Bayesian Mendelian randomization methods for index trait bias correction in subsequent trait genome-wide association studies
+  </a><br>
+  with K. L. Lunetta, D. R. Gagnon, G. M. Peloso.
+  <i>Human Genetics and Genomics Advances</i>, 2026.
+</p>
+
+<p>
+  <a href="https://doi.org/10.1161/CIRCGEN.125.005442">
+    Genome-Wide Association Study of Chronic Venous Insufficiency and Lymphedema in the Million Veteran Program
+  </a><br>
+  with G. M. Peloso, M. M. Young, K. Cho, S. Kinlay.
+  <i>Circulation: Genomic and Precision Medicine</i>, 2026.
+</p>
+
+<p>
+  <a href="https://www.proquest.com/openview/2302a5ecb0495fd7aaaec9b8fb5fca54/1?pq-origsite=gscholar&cbl=18750&diss=y">
+    Statistical Methods for Index Trait Bias in Genetic Association Studies of Subsequent Traits
+  </a><br>
+  Thesis, Boston University, 2026.
+</p>
+
+<p>
+  <a href="https://arxiv.org/abs/2507.00962">
+    clustra: A multi-platform k-means clustering algorithm for analysis of longitudinal trajectories in large electronic health records data
+  </a><br>
+  with H. Gerlovin, G. Ostrouchov, R. Ehrbar, A. B. Dufour, B. R. Ferolito,
+  S. Demissie, L. Costa, Y.-L. Ho, L. Tarko, et al.
+  <i>arXiv</i>, 2025.
+</p>
+
+<p>
+  <a href="https://doi.org/10.1161/STROKEAHA.124.047103">
+    Protein Identification for Stroke Progression via Mendelian Randomization in Million Veteran Program and UK Biobank
+  </a><br>
+  with A. R. Elmore, A. E. Hartley, H. J. Aparicio, D. C. Posner, G. Hemani,
+  K. Tilling, T. R. Gaunt, P. W. F. Wilson, J. P. Casas, et al.
+  <i>Stroke</i>, 2024.
+</p>
+
+<p>
+  <a href="https://doi.org/10.1038/s41564-022-01272-z">
+    Comparative effectiveness of third doses of mRNA-based COVID-19 vaccines in US veterans
+  </a><br>
+  with B. A. Dickerman, H. Gerlovin, A. L. Madenci, M. J. Figueroa Muñiz,
+  J. K. Wise, B. R. Ferolito, K. E. Kurgansky, D. R. Gagnon, K. Cho, et al.
+  <i>Nature Microbiology</i>, 2023.
+</p>
+
+<p>
+  <a href="https://doi.org/10.1007/978-3-030-46725-8_13">
+    Placental calcification: long-standing questions and new biomedical research directions
+  </a><br>
+  with A. Correia-Branco, S. Kallol, C. D. Caiaffa, N. Jayaraman,
+  O. Kashpur, M. C. Wallingford.
+  <i>Cardiovascular Calcification and Bone Mineralization</i>, 2020.
+</p>
+
+<p>
+  <a href="https://doi.org/10.33590/emjradiol/19-00210">
+    New frontiers in placenta tissue imaging
+  </a><br>
+  with C. D. Nguyen, A. Correia-Branco, E. Mercan, S. Mallidi,
+  M. C. Wallingford.
+  <i>EMJ. Radiology</i>, 2020.
+</p>
+  </section>
+
+  <!-- ====================== TEACHING ======================
+       One <li> per course, newest first. -->
+  <section id="teaching">
+    <h2>Teaching Assistant</h2>
+    <ul class="items">
+      <li><em>BS858: Statistical Genetics, Boston University, Spring '26</em></li>
+      <li><em>Statistical Bootcamp for MS in Biostatistics, Summer '24</em></li>
+      <li><em>BS852: Statistical Methods for Epidemiology, Boston University, Spring '23</em></li>
+      <li><em>BS805: Intermediate Statistical Computing, Boston University, Fall '23, Spring '22</em></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Nimish Adhikari.
+</footer>
+</body>
+</html>
